@@ -6,6 +6,10 @@
   Author: Jean Parpaillon <jean.parpaillon@free.fr>
 */
 #include <apr_md5.h>
+#ifdef __linux__
+/* For MAX_PATH */
+#include <linux/limits.h>
+#endif
 
 #include "htpasswd.h"
 
